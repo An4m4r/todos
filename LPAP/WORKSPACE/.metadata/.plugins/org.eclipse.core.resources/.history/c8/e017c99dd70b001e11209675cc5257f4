@@ -1,0 +1,8 @@
+
+public class Aluno {
+       
+	int rm;
+	String nome;
+	String cpf;
+	
+}

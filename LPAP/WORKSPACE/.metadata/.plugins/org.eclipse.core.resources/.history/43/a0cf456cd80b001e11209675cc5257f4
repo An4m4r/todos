@@ -1,0 +1,19 @@
+import javax.swing.JOptionPane;
+
+public class CriaAluno {
+
+	public static void main(String[] args) {
+	
+		Aluno aluno = new Aluno ();
+		
+		aluno.rm = 987654;
+		aluno.nome = "Ordnael";
+		aluno.cpf = "300,400,500-60";
+		
+		JOptionPane.showMessageDialog(null,
+				aluno.rm + "\n" +
+				aluno.nome + "\n" +
+				aluno.cpf );
+	}
+
+}

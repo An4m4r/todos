@@ -1,0 +1,45 @@
+package projeto2;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class ExercicioImc {
+
+	public static void main(String[] args) {
+
+		String Altura = JOptionPane.showInputDialog(null, "digite um numero de 1 a 12 :");
+		float Altura = Float.parseFloat(Altura);
+	
+		String Massa = JOptionPane.showInputDialog(null, "Informe um peso:");
+		float Massa = Float.parseFloat(Massa);
+	
+		
+		float Imc= Massa/(Altura*2);
+		System.out.println(Imc);
+		
+		if(Imc < 18.2) {
+			System.out.println("Magreza");
+			
+		}else if (Imc >= 18.5 && Imc <= 24.9){
+			System.out.println("Normal");
+			
+		}else if (Imc >= 25 && Imc <= 29.9){
+			System.out.println("Sobrepeso");
+			
+		}else if (Imc >= 30 && Imc <= 34.9){
+			System.out.println("Obesidade grau I");
+				
+		}else if (Imc >= 35 && Imc <= 39.9){
+			System.out.println("Obesidade grau II");
+	
+		}else if (Imc <40 ){
+			System.out.println("Obesidade grau III");
+			}
+		
+		
+	}
+	
+	}
+
+}

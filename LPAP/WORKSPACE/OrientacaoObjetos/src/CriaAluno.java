@@ -1,0 +1,21 @@
+import javax.swing.JOptionPane;
+
+public class CriaAluno {
+
+	public static void main(String[] args) {
+	
+		Aluno aluno = new Aluno ();
+		
+		aluno.setRm (987654);
+		aluno.setNome  ("Ordnael");
+		aluno.setCpf  ("300,400,500-60");
+		aluno.setTelefone("4002-8922");
+		
+		JOptionPane.showMessageDialog(null,
+				aluno.getTelefone () + "\n" +
+				aluno.getRm ()+ "\n" +
+				aluno.getNome ()+ "\n" +
+				aluno.getCpf ());
+	}
+
+}

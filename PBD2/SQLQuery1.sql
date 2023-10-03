@@ -1,0 +1,76 @@
+CREATE DATABASE LIVRARIA
+USE LIVRARIA
+
+
+CREATE TABLE CATEGORIA (
+COD_CATEGORIA INT NOT NULL,
+DESCRIÇÃO VARCHAR(60),
+CONSTRAINT PKCOD PRIMARY KEY (COD_CATEGORIA))
+
+ 
+
+CREATE TABLE LIVRO ( 
+COD_LIVRO INT NOT NULL,
+TITULO VARCHAR(100), 
+ANO CHAR(4),
+COD_CATEGORIA INT NOT NULL,
+CONSTRAINT PKCO PRIMARY KEY(COD_LIVRO),
+CONSTRAINT PKCODD FOREIGN KEY (COD_CATEGORIA) REFERENCES CATEGORIA(COD_CATEGORIA))
+
+ 
+
+CREATE TABLE AUTOR( 
+COD_AUTOR INT NOT NULL, 
+NOME VARCHAR(30),
+DT_NASCIMENTO DATE NOT NULL,
+BIOGRAFIA VARCHAR(200),
+NACIONALIDADE VARCHAR(70),
+CONSTRAINT PKC_autor PRIMARY KEY(COD_AUTOR))
+
+ 
+CREATE TABLE LIVRO_AUTOR(
+COD_LIVRO INT NOT NULL,
+COD_AUTOR INT NOT NULL, 
+CONSTRAINT FKCO FOREIGN KEY (COD_LIVRO) REFERENCES LIVRO,
+CONSTRAINT FKCODD FOREIGN KEY (COD_AUTOR) REFERENCES AUTOR )
+
+ALTER TABLE LIVRO_AUTOR
+ADD CONSTRAINT PK_LIVRO_AUTOR PRIMARY KEY (COD_LIVRO,COD_AUTOR)
+
+INSERT INTO CATEGORIA
+(COD_CATEGORIA,DESCRIÇÃO)
+VALUES
+(1,'INFORMATICA'),
+(2, 'INFANTO JUVENIL'),
+(3, 'FICÇÃO CIENTIFICA')
+
+INSERT INTO LIVRO
+(COD_LIVRO,TITULO,ANO,COD_CATEGORIA)
+VALUES
+(1,'Harry Potter e a Pedra Filosofal','1997', 2),
+(2,'Use a Cabeça! Desenvolvendo para Android','2016', 1),
+(3,'Harry Potter e a Câmara Secreta','1998',2),
+(4,'Visões de Robô','1990',3)
+
+INSERT INTO AUTOR
+(COD_AUTOR,NOME,DT_NASCIMENTO,BIOGRAFIA,NACIONALIDADE)
+VALUES
+(1,'J. K. Rowling','31/07/1965','Joanne "Jo" Rowling, OBE, FRSL, mais conhecida como J. K. Rowling, é uma
+escritora, roteirista e produtora cinematográfica britânica, notória por escrever a
+série de livros Harry Potte','Britânica'),
+(2,'Dawn Griffiths',null,'Dawn Griffiths começou sua vida como matemática em uma das melhores universidades do Reino
+Unido. Seguiu sua carreir ', 'Britânica'),
+(3,'David Griffiths', null, 'David Griffiths começou a programar com 12 anos, ', 'Britânica'),
+(4,'Dawn Griffiths', null,'Dawn Griffiths 
+em TI com Matemática e com ser escritora. ', 'Britânica')
+
+INSERT INTO LIVRO_AUTOR
+(COD_LIVRO,COD_AUTOR)
+VALUES
+(1,1),
+(2,2),
+(2,3),
+(3,4),
+(3,4),
+(4,4)
+

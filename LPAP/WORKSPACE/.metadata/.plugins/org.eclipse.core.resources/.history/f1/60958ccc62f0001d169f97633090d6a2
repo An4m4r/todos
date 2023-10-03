@@ -1,0 +1,18 @@
+package projeto2;
+import java.util.Scanner;
+
+public class VariaveisAula {
+
+	public static void main(String[] args) {
+		
+		Scanner ler = new Scanner (System.in);
+		int a; 
+		
+		System.out.printf("informe um nummero: \n");
+		a = ler.nextInt();
+		
+		System.out.println("o numero dgitado foi:" + a);
+
+	}
+
+}

@@ -1,0 +1,15 @@
+
+public class Aluno {
+       
+	private int rm;
+	private String nome;
+	private String cpf;
+	
+	public int getRm() {
+		return rm;
+	}
+	public void int setRm(int rm) {
+		this.rm = rm;
+	}
+	 
+}

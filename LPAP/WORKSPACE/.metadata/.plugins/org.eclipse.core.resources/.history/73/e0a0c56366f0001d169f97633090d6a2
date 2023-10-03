@@ -1,0 +1,41 @@
+package projeto2;
+import java.util.Scanner;
+
+public class VariaveisAula {
+
+	public static void main(String[] args) {
+		
+		Scanner ler = new Scanner (System.in);
+		int a; 
+		
+		System.out.printf("informe um nummero: \n");
+		a = ler.nextInt();
+		
+		System.out.println("o numero dgitado foi:" + a);
+		
+		Scanner ler2 = new Scanner (System.in);
+		int b; 
+		
+		System.out.printf("informe um nummero: \n");
+		b = ler2.nextInt();
+		
+		System.out.println("o numero dgitado foi:" + b);
+
+		Scanner ler3 = new Scanner (System.in);
+		int c; 
+		
+		System.out.printf("informe um nummero: \n");
+		c = ler3.nextInt();
+		
+		System.out.println("o numero dgitado foi:" + c);
+
+		
+		if ((a< b + c) && (b< a +c) && (c < a = b)) {
+			if ((a==b)&&(b==c)) {
+				System.out.println("Triângulo Equilatero");
+			}
+		}
+
+	}
+
+}
